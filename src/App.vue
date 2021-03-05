@@ -5,8 +5,11 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title">{{msg}}</h1>
+          <todo-card />
         </div>
       </div>
+
+     
 
       <div class="hero-foot">
         <div class="container">
@@ -28,13 +31,22 @@
 </template>
 
 <script>
-export default {
+import todoCard from "./components/todo-card.vue" //ici nous importons notre composant principal Todocard
+
+
+
+
+export default{
+
+  components: { todoCard }, 
+  
   name: 'app',
   data () {
     return {
       msg: 'Hello, et bienvenue sur la demo TodoList en Vue.js!'
     }
   }
+  
 }
 </script>
 
